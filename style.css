@@ -23,7 +23,6 @@
         background-color: rgb(122, 3, 0);
         padding: 0;
         margin: 0;
-        overflow-y: hidden;
     }
 
     header {
@@ -67,11 +66,3 @@
         margin : 185px 0 0 0;
         padding : 0 0 125px 0;
     }
-
-    /* Phones */
-@media screen and (max-height: 900px) {
-    footer{
-        background: black;
-        margin: auto;  
-    }
-}
