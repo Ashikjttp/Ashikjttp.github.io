@@ -11,11 +11,17 @@
     src: url(fonts/RubikVinyl-Regular.ttf) format('truetype'); 
 }
 
+/* Jersey15-Regular */
+@font-face {
+    font-family: 'Jersey15-Regular';
+    src: url(fonts/Jersey15-Regular.ttf);
+}
+
 /*Styles*/
     body { 
         color: white;
         background-color: rgb(122, 3, 0);
-        height: 1;
+        height: 1px;
         width: 1;
         margin: 0;
     }
@@ -58,4 +64,5 @@
         background: black;
         margin : 185px 0 0 0;
         padding : 0 0 101px 0;
+        height: 0px;
     }
