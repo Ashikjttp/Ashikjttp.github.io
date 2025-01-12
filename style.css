@@ -21,9 +21,9 @@
     body { 
         color: white;
         background-color: rgb(122, 3, 0);
-        height: 1px;
-        width: 1;
+        padding: 0;
         margin: 0;
+        overflow-y: hidden;
     }
 
     header {
@@ -46,6 +46,7 @@
     h1 {    
         font-family:'RubikVinyl-Regular.ttf','Franklin Gothic Medium';
         text-align: center;
+        transition: all 2s;
         position: relative;
         top: -115px; 
     }
@@ -55,14 +56,24 @@
         font-family:'PlaywriteIS-VariableFont_wght','Franklin Gothic Medium';
         text-align: center;
         font-size: 20px;
+        transition-duration: 2s;
         position: relative;
         top: -80px; 
     }
 
-    /* End */
+    /* End */ 
     footer {
         background: black;
         margin : 185px 0 0 0;
-        padding : 0 0 101px 0;
-        height: 0px;
+        padding : 0 0 125px 0;
     }
+
+    /* Phones */
+@media screen and (max-height: 900px) {
+    footer{
+        background:black; 
+        margin: auto ;
+        padding : 0 0 200px 0;
+    }
+}  
+    
