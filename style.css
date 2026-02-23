@@ -1,142 +1,102 @@
-/*Fonts*/
-/* PlaywriteIS */
-@font-face {
-    font-family:'PlaywriteIS-VariableFont_wght';
-    src: url(fonts/PlaywriteIS-VariableFont_wght.ttf) format('truetype');
-}
-
-/* RubikVinyl-Regular */
-@font-face {
-    font-family:'RubikVinyl-Regular.ttf';
-    src: url(fonts/RubikVinyl-Regular.ttf) format('truetype'); 
-}
-
-/* Jersey15-Regular */
-@font-face {
-    font-family: 'Jersey15-Regular';
-    src: url(fonts/Jersey15-Regular.ttf);
-}
-
 /*Styles*/
-    body { 
-        color: white;
-        background-color: rgb(122, 3, 0);
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-    }
+body { 
+    color: #f3e2e2ce;
+    background: #7a0000;
+    margin: auto;
+    overflow: hidden;
+}
+.snowflake{
+    position: relative;
+    display: flex;
 
-    header {
-        background: black;
-        padding: 0 0 268px 0;
-        text-align: center;  
+}
+.snowflake span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 px;
+    box-shadow: 0 0 0 10px white,
+    0 0 50px #f3e2e2ce,
+    0 0 60px #f3e2e2ce;
+    animation: snowflake 10s linear infinite;
+    animation-duration: calc(215s /var(--ashik-snowflake));
+}
+@keyframes snowflake{
+    0%{
+        transform: translateY(-100vh) scale(0)
     }
-
-    /* Profile Picture */
-    section {
-        background-image: url("ashpfp.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 250px;
-        position: relative;
-        top: -95px;  
+    100%{
+        transform: translateY(100vh) scale(1)
     }
+}
 
-    /* Name */
-    h1 {    
-        font-family:'RubikVinyl-Regular.ttf','Franklin Gothic Medium';
+.top {
+    background: #060606;
+    padding-top:20vh;
+    
+}
+.wavetop{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wavemiddletop{
+    position: relative;
+    fill: #8a0b09;
+}
+
+.ashpfp {
+    background-image: url("ashpfp.jpg");
+    bottom: 26vh;
+    height: 250px;
+    max-width: 260px;
+    background-size: 100%;
+    position: relative;
+    margin: auto;
+    border-radius: 100%;
+    border: 10px solid #060606;
+}
+
+/* Name */
+    h1 {
+        font-family:'Jersey15-Regular','Franklin Gothic Medium';
+        bottom: 28vh;
+        font-size: 45px;
         text-align: center;
-        transition: all 3s;
         position: relative;
-        top: -115px; 
     }
 
     /* Paragraph Text */
     p {
         font-family:'PlaywriteIS-VariableFont_wght','Franklin Gothic Medium';
+        bottom: 32vh;
+        font-size: 23px;
         text-align: center;
-        font-size: 20px;
-        transition-duration: 5s;
         position: relative;
-        top: -80px; 
     }
 
-    /* End */ 
-    footer {
-        background: black;
-        margin : 185px 0 0 0;
-        padding : 0 0 125px 0;
-    }
-   
-/* Non PC Devices */
-/* Bigger Devices */
-@media screen and (min-height: 980px){
-    header{
-        margin: auto;
-        padding: 0 0 450px 0;
-    }
-
-    footer{
-        background: black;
-        margin: auto;
-        padding: 0 0 500px 0 ;
-    }
-}
-
-/* Phones */
-@media screen and (max-height: 935px){
-    header{
+        /* More Info */
+    h2 {
+        font-family:'PlaywriteIS-VariableFont_wght','Franklin Gothic Medium';
+        bottom: 3vh;
+        font-size: 19px;
+        text-align: center;
         position: relative;
-        top: -70px;
     }
 
-    section{
-        position: relative;
-        top: -140px;
+    .bottom {
+        background: #060606;
+        padding-bottom: 50vh;
     }
 
-    h1{
-        position: relative;
-        top: -130px;
-    }
-
-    p{
-        position: relative;
-        top: -115px;
-    }
-
-    footer{
-        background: black;
-        margin: auto;
-        padding: 0 0 250px 0 ;
-    }
-}
-
-/* Smaller Devices */
-@media screen and (max-height: 740px){
-    header{
-        position: relative;
-        bottom: 85px;
-    }
-
-    section{
-        position: relative;
-        top: -180px;
-    }
-
-    h1{
-        position: relative;
-        top: -190px;
-    }
-    
-    p{
-        position: relative;
-        top: -190px;
-    }
-
-    footer{
-        background: black;
-        position: relative;
-        top: -150px;
-    }    
+    .wavebottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: rotate(180deg);
+        overflow: hidden;
 }

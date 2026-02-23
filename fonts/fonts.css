@@ -1,0 +1,14 @@
+@font-face {
+    font-family:'PlaywriteIS-VariableFont_wght';
+    src: url(PlaywriteIS-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:'RubikVinyl-Regular.ttf';
+    src: url(RubikVinyl-Regular.ttf) format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Jersey15-Regular';
+    src: url(Jersey15-Regular.ttf);
+}
