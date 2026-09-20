@@ -75,6 +75,7 @@ body {
     overflow: hidden;
 }
 .clouds .cloud {
+    overflow: hidden;
     position: absolute;
     width: 100vw; /* Larger size for more impact */
     height: 10vh; /* Larger size for more impact */
