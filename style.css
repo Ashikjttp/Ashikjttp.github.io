@@ -1,0 +1,70 @@
+body {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+    background: rgb(15, 15, 15);
+}
+
+.infobox {
+    border: 5px dotted #00ffff;
+    border-radius: 50px;
+    padding: 4vh 8vw 4vh 8vw;
+    margin: auto;
+    max-width: fit-content;
+}
+
+.ashikpic {
+    border: 5px dotted gold;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+}
+
+.nametext {
+    font-family: "Nosifer",'Franklin Gothic Medium';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    text-align: center;
+
+}
+
+.welcomePtext {
+    font-family: "Playwrite GB J", cursive;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav{
+    display:block;
+    margin: auto;
+    text-align: center;
+}
+.rain {
+    overflow: hidden;
+}
+.rain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.rain .raindrop {
+    position: absolute;
+    bottom: 100%;
+    width: 2px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    animation: fall linear infinite;
+    pointer-events: none;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
