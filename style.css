@@ -28,7 +28,7 @@ body {
 
 }
 
-.welcomePtext {
+.abouttext {
     font-family: "Playwrite GB J", cursive;
     font-optical-sizing: auto;
     font-style: italic;
@@ -66,5 +66,35 @@ body {
 @keyframes fall {
     to {
         transform: translateY(100vh);
+    }
+}
+
+
+
+.clouds {
+    overflow: hidden;
+}
+.clouds .cloud {
+    position: absolute;
+    width: 100vw; /* Larger size for more impact */
+    height: 10vh; /* Larger size for more impact */
+    margin-top: -52vh; /* Negative margin to raise or lower clouds */
+    opacity: 0; /* Start with no clouds visible */
+    background: rgba(255, 255, 255, 0.5); /* Cloud color */
+    filter: blur(18px); /* Blur for a more realistic cloud appearance */
+    animation: float linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0vw); /* Start off-screen to the left */
+        opacity: 0; /* Start invisible */
+    }
+    30% {
+        opacity: 1; /* Fade in */
+    }
+    70% {
+        transform: translateX(75vw); /* Move to the right end of the viewport */
+        opacity: 0; /* Stay visible */
     }
 }
