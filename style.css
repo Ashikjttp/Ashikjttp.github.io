@@ -9,6 +9,12 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+    background: rgb(15, 15, 15);
+}
+
 .infobox {
     border: 5px dotted #00ffff;
     border-radius: 30px;
