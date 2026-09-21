@@ -1,35 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Rain Generation
     const rainSection = document.querySelector('.rain');
     const numberOfRaindrops = 80;
 
-    for (let i = 0; i < numberOfRaindrops; i++) {
-        const raindrop = document.createElement('div');
-        raindrop.classList.add('raindrop');
-        raindrop.style.left = `${Math.random() * 100}%`;
-        raindrop.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
-        raindrop.style.animationDelay = `${Math.random() * 3}s`;
-        rainSection.appendChild(raindrop);
+    if (rainSection) {
+        for (let i = 0; i < numberOfRaindrops; i++) {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = `${Math.random() * 100}%`;
+            raindrop.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+            raindrop.style.animationDelay = `${Math.random() * 3}s`;
+            rainSection.appendChild(raindrop);
+        }
     }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Cloud Generation
     const cloudsSection = document.querySelector('.clouds');
-    const numberOfClouds = 4; // Adjust the number of clouds
+    const numberOfClouds = 4;
 
     function createCloud() {
         const cloud = document.createElement('div');
         cloud.classList.add('cloud');
 
-        // Random vertical position, only in the top 40% of the container
+        // Random vertical position (top 30%)
         cloud.style.top = `${Math.random() * 30}%`;
 
-        // Random width and height for more variation in shapes
+        // Random width and height
         const width = Math.random() * 600 + 600;
         const height = Math.random() * 300 + 200;
         cloud.style.width = `${width}px`;
         cloud.style.height = `${height}px`;
 
-        // Random border radius for more random shapes
+        // Random border radius
         cloud.style.borderRadius = `${Math.random() * 50 + 50}% ${Math.random() * 50 + 50}% ${Math.random() * 50 + 50}% ${Math.random() * 50 + 50}%`;
 
         // Random animation duration and delay
@@ -37,11 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const floatDelay = Math.random() * 2;
         cloud.style.animationDuration = `${floatDuration}s`;
         cloud.style.animationDelay = `${floatDelay}s`;
+
         cloudsSection.appendChild(cloud);
     }
 
-    // Create the clouds
-    for (let i = 0; i < numberOfClouds; i++) {
-        createCloud();
+    if (cloudsSection) {
+        for (let i = 0; i < numberOfClouds; i++) {
+            createCloud();
+        }
     }
 });
