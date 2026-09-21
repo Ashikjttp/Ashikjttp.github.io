@@ -2,7 +2,7 @@ body {
     color: #00ffff;
     text-shadow: 0 0 5px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
     background: rgb(15, 15, 15);
-overflow-x: hidden;
+    overflow: hidden;
 }
 
 .infobox {
@@ -69,8 +69,6 @@ overflow-x: hidden;
     }
 }
 
-
-
 .clouds .cloud {
     overflow: hidden;
     position: absolute;
@@ -88,13 +86,12 @@ overflow-x: hidden;
         transform: translateX(-40vw);
         opacity: 0;
     }
+    
     30% {
         opacity: 1;
     }
-    70% {
-        opacity: 1;
-    }
-    100% {
+    
+    80% {
         transform: translateX(100vw);
         opacity: 0;
     }
