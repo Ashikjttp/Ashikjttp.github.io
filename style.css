@@ -5,6 +5,7 @@ body {
 }
 
 .infobox {
+    position: relative;
     border: 5px dotted #00ffff;
     border-radius: 50px;
     padding: 4vh 8vw 4vh 8vw;
@@ -61,14 +62,15 @@ body {
     height: 15px;
     background: rgba(255, 255, 255, 0.6);
     animation: fall linear infinite;
-    pointer-events: none;
-}
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
+    will-change: transform;
+    transform: translateZ(0);
 }
 
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
 
 
 .clouds {
@@ -76,25 +78,28 @@ body {
 }
 .clouds .cloud {
     position: absolute;
-    width: 100vw; /* Larger size for more impact */
-    height: 10vh; /* Larger size for more impact */
-    margin-top: -52vh; /* Negative margin to raise or lower clouds */
-    opacity: 0; /* Start with no clouds visible */
-    background: rgba(255, 255, 255, 0.5); /* Cloud color */
-    filter: blur(18px); /* Blur for a more realistic cloud appearance */
+    width: 100vw;
+    height: 10vh;
+    margin-top: -52vh;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(18px);
     animation: float linear infinite;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 @keyframes float {
     0% {
-        transform: translateX(0vw); /* Start off-screen to the left */
-        opacity: 0; /* Start invisible */
+        transform: translate3d(0vw, 0, 0);
+        opacity: 0;
     }
     30% {
-        opacity: 1; /* Fade in */
+        opacity: 1;
     }
     70% {
-        transform: translateX(75vw); /* Move to the right end of the viewport */
-        opacity: 0; /* Stay visible */
+        transform: translate3d(75vw, 0, 0);
+        opacity: 0;
     }
 }
