@@ -20,105 +20,12 @@ body {
 }
 
 .nametext {
-    font-family: "Nosifer", 'Franklin Gothic Medium';
+    font-family: "Nosifer",'Franklin Gothic Medium';
     font-weight: 400;
     font-style: normal;
     font-size: 45px;
     text-align: center;
-}
 
-.abouttext {
-    font-family: "Playwrite GB J", cursive;
-    font-optical-sizing: auto;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-}
-
-.nav {
-    display: block;
-    margin: auto;
-    text-align: center;
-}
-
-.rain {
-    position: relative;
-    overflow: hidden;
-}
-
-.rain .raindrop {
-    position: absolute;
-    bottom: 100%;
-    width: 2px;
-    height: 15px;
-    background: rgba(255, 255, 255, 0.6);
-    animation: fall linear infinite;
-    pointer-events: none;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
-
-.clouds {
-    position: relative;
-    overflow: hidden;
-}
-
-.clouds .cloud {
-    position: absolute;
-    margin-top: -52vh;
-    opacity: 0;
-    background: rgba(255, 255, 255, 0.5);
-    filter: blur(18px);
-    animation: float linear infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateX(0vw);
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
-    }
-    70% {
-        transform: translateX(75vw);
-        opacity: 0;
-    }
-}body {
-    color: #00ffff;
-    text-shadow: 0 0 5px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
-    background: rgb(15, 15, 15);
-    overflow: hidden;
-}
-
-.infobox {
-    border: 5px dotted #00ffff;
-    border-radius: 30px;
-    padding: 20px 5vw;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 600px;
-}
-
-.ashikpic {
-    border: 5px dotted gold;
-    border-radius: 100%;
-    display: block;
-    margin: auto;
-}
-
-.nametext {
-    font-family: "Nosifer", 'Franklin Gothic Medium';
-    font-weight: 400;
-    font-style: normal;
-    font-size: clamp(24px, 6vw, 45px);
-    text-align: center;
-    word-break: break-word;
 }
 
 .abouttext {
@@ -135,7 +42,9 @@ body {
     margin: auto;
     text-align: center;
 }
-
+.rain {
+    overflow: hidden;
+}
 .rain::before {
     content: '';
     position: absolute;
@@ -160,30 +69,32 @@ body {
     }
 }
 
-.clouds .cloud {
+
+
+.clouds {
     overflow: hidden;
+}
+.clouds .cloud {
     position: absolute;
-    width: 40vw;
-    height: 10vh;
-    margin-top: 10vh;
-    opacity: 0;
-    background: rgba(255, 255, 255, 0.5);
-    filter: blur(18px);
+    width: 100vw; /* Larger size for more impact */
+    height: 10vh; /* Larger size for more impact */
+    margin-top: -52vh; /* Negative margin to raise or lower clouds */
+    opacity: 0; /* Start with no clouds visible */
+    background: rgba(255, 255, 255, 0.5); /* Cloud color */
+    filter: blur(18px); /* Blur for a more realistic cloud appearance */
     animation: float linear infinite;
 }
 
 @keyframes float {
     0% {
-        transform: translateX(-40vw);
-        opacity: 0;
+        transform: translateX(0vw); /* Start off-screen to the left */
+        opacity: 0; /* Start invisible */
     }
-    
     30% {
-        opacity: 1;
+        opacity: 1; /* Fade in */
     }
-    
-    80% {
-        transform: translateX(100vw);
-        opacity: 0;
+    70% {
+        transform: translateX(75vw); /* Move to the right end of the viewport */
+        opacity: 0; /* Stay visible */
     }
 }
